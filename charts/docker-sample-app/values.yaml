@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: tbrowet/podinfo
+  tag: dev-zwi4lypv
+  pullPolicy: IfNotPresent

@@ -2,21 +2,19 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: podinfo-dev
+  name: docker-sample-app-dev
   namespace: dev
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:dev-*
 spec:
-  releaseName: podinfo-dev
+  releaseName: docker-sample-app-dev
   chart:
     git: git@github.com:tbrowet/helm-operator-get-started
-    path: charts/podinfo
+    path: charts/docker-sample-app
     ref: master
   values:
     image:
-      repository: tbrowet/podinfo
-      tag: dev-zwi4lypv
+      repository: tbrowet/docker-sample-app
+      tag: dev-d657c64
     replicaCount: 1
-    hpa:
-      enabled: false

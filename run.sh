@@ -16,6 +16,8 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 
 fluxctl identity --k8s-fwd-ns flux-system
 
+fluxctl sync --k8s-fwd-ns flux-system
+
 
 
    ./ci-mock.sh -r tbrowet/podinfo -b dev
