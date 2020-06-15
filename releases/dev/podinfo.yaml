@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: tbrowet/podinfo
-      tag: dev-zwi4lypv
+      tag: dev-yku2il1s
     replicaCount: 1
     hpa:
       enabled: false
