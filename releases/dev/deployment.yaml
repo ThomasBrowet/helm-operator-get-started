@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: docker-sample-app-deployment
+  namespace: dev
   labels:
     app: docker-sample-app
 spec:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
       - name: docker-sample-app
-        image: tbrowet/docker-sample-app:dev-zwi4lypv
+        image: tbrowet/docker-sample-app:dev-d657c64
         ports:
         - containerPort: 80
