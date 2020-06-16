@@ -1,4 +1,4 @@
-az aks get-credentials --resource-group gitops --name aks03
+az aks get-credentials --resource-group gitops --name aks01
 
 kubectl create ns flux-system
 
@@ -22,5 +22,16 @@ https://github.com/ThomasBrowet/helm-operator-get-started
 fluxctl sync --k8s-fwd-ns flux-system
 
 
+# Deployment.yaml
 
-   ./ci-mock.sh -r tbrowet/podinfo -b dev
+http://localhost:8080/
+
+https://github.com/ThomasBrowet/docker-sample-app
+
+https://github.com/ThomasBrowet/helm-operator-get-started/commits/master
+
+http://localhost:8080/
+
+
+
+
