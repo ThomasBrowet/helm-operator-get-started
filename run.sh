@@ -3,11 +3,11 @@ az aks get-credentials --resource-group gitops --name aks03
 kubectl create ns flux-system
 
 helm repo add fluxcd https://charts.fluxcd.io
-
-
 helm upgrade -i flux fluxcd/flux --wait \
 --namespace flux-system \
---set git.url=git@github.com:ThomasBrowet/helm-operator-get-started
+--set git.url=git@github.com:ThomasBrowet/helm-operator-get-started \
+--set additionalArgs={--sync-garbage-collection}
+
 
 helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 --namespace flux-system \
@@ -15,6 +15,9 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 --set helm.versions=v3
 
 fluxctl identity --k8s-fwd-ns flux-system
+
+https://github.com/ThomasBrowet/helm-operator-get-started
+
 
 fluxctl sync --k8s-fwd-ns flux-system
 
