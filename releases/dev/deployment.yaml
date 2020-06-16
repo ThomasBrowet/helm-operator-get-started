@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: docker-sample-app
-        image: tbrowet/docker-sample-app:dev-b8eec0c
+        image: tbrowet/docker-sample-app:dev-78ad03b
         ports:
         - containerPort: 80
